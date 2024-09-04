@@ -1,0 +1,248 @@
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d5e6e4; /* Apply the color to the header */
+  color: #ffffff; /* White text for other header elements */
+  padding: 10px 20px;
+  border-bottom: 1px solid #c0cece; /* Slightly darker shade for the border */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Increased height for better spacing */
+  z-index: 1000;
+}
+
+/* Logo and Application Name Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Adjust the size of the logo */
+  height: 50px;
+  margin-right: 15px;
+}
+
+.app-name {
+  font-size: 1.8em; /* Larger font size for the application name */
+  font-weight: bold;
+  color: #001f54; /* Navy blue color for the application name */
+}
+
+/* Profile Section Styling in Header */
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ffffff; /* White border for the profile image */
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: bold;
+  color: #001f54; /* Navy blue color for the user name */
+}
+
+.profile-email {
+  font-size: 0.9em;
+  color: #001f54; /* Navy blue color for the email */
+}
+
+/* Logout Button Styling */
+.logout-button {
+  background-color: #ff6f61; /* Soft coral color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Vertical Navigation Bar Styling */
+.vertical-nav {
+  width: 250px;
+  background-color: #d5e6e4; /* Apply the color to the sidebar */
+  padding: 20px;
+  border-right: 1px solid #3d8b8b; /* Slightly darker shade for the border */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 80px; /* Aligns with the adjusted header height */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  margin-top: 30px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* White background for the search bar */
+}
+
+/* Main Content Area Styling */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 250px; /* Adjust for vertical navbar width */
+  padding-right: 20px;
+  padding-top: 80px; /* Adjust for header height */
+  padding-bottom: 40px; /* Adjust for footer height */
+  height: calc(100vh - 120px); /* Adjusted height considering header and footer */
+}
+
+/* Calendar Section with Reduced Height */
+/* Updated Calendar Section with Neutral Colors */
+.calendar-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar {
+  width: 90%;
+  max-width: 900px;
+  height: 80%;
+  background-color: #ffffff; /* White background for the calendar */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(214, 207, 207, 0.1); /* Subtle shadow for depth */
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Calendar elements styling */
+.react-calendar__tile {
+  max-width: 100% !important;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #333; /* Darker text for contrast */
+}
+
+.react-calendar__tile--now {
+  background: #cec7c7; /* Light gray for the current date */
+}
+
+.react-calendar__tile--active {
+  background: #82c9dd; /* Light teal for active date */
+  color: #333; /* Dark text for better readability */
+  border-radius: 5px;
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #d5e6e4; /* Apply the color to the footer */
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #aeb8b8; /* Slightly darker shade for the border */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 1000;
+}
+/* New styles for Create MoM button */
+.create-mom-button {
+  background-color: #82c9dd; /* Light teal color */
+  color: white;
+  border: none;
+  padding: 5px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+  position: absolute; /* Absolute positioning for placement on active date */
+  z-index: 1; /* Ensure it appears above the calendar */
+  transform: translate(-50%, -50%); /* Center the button */
+}
+
+/* Update Calendar Section with Relative Positioning */
+.calendar-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Allows absolute positioning of button within this container */
+}
+
+/* Active Date Styling to Accommodate Button */
+.react-calendar__tile--active {
+  position: relative; /* Set relative positioning to allow button alignment */
+  background: #82c9dd; /* Light teal for active date */
+  color: #333; /* Dark text for better readability */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Draft Popup Styling */
+.draft-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1001;
+  width: 400px;
+}
+
+.draft-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.draft-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Notification Styling */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #82c9dd; /* Light teal color */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+}
